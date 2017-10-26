@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
             <!--<i class="ion ion-social-github"></i> <span>Support Us</span>-->
           <!--</a>-->
           <a href="#" class="btn btn-hero-success main-btn">
-            <i class="ion ion-social-github"></i> <span>JAPO online</span>
+            <i class="ion ion-social-github"></i> <span>Nama Klien</span>
           </a>
         </nb-sidebar-header>
         <ng-content select="nb-menu"></ng-content>

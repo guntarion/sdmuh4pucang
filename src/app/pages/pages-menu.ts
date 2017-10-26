@@ -2,7 +2,7 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
-    title: 'Dashboard',
+    title: 'Home',
     icon: 'nb-home',
     link: '/pages/dashboard',
     home: true,
@@ -11,26 +11,26 @@ export const MENU_ITEMS: NbMenuItem[] = [
     title: 'PENGANTAR',
     group: true,
   },
-  {
+  /*{
     title: 'Fingerprint Analysis',
     icon: 'nb-keypad',
     link: '/pages/konsepilmiah',
-  },
+  },*/
   {
     title: 'Sambutan',
     icon: 'nb-compose',
     children: [
       {
         title: 'Kepala Sekolah',
-        link: '/pages/forms/inputs',
+        link: '/pages/sambutan/sam-kepsek',
       },
       {
         title: 'Guru BK',
-        link: '/pages/forms/layouts',
+        link: '/pages/sambutan/sam-gurubk',
       },
       {
         title: 'Psikolog',
-        link: '/pages/forms/layouts',
+        link: '/pages/sambutan/sam-psikolog',
       },
     ],
   },
@@ -85,7 +85,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-compose',
     link: '/pages/bantuan',
   },
-  {
+  /*{
     title: 'DEFAULT',
     group: true,
   },
@@ -192,12 +192,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-title',
     children: [
       {
-        title: 'TinyMCE',
+        title: 'TinyMCE',F
         link: '/pages/editors/tinymce',
       },
       {
         title: 'CKEditor',
-        link: '/pages/editors/ckeditor',
+        link: '/pages/editFCors/ckeditor',
       },
     ],
   },
@@ -232,5 +232,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/auth/reset-password',
       },
     ],
-  },
+  },*/
 ];

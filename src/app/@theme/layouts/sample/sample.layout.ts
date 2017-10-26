@@ -33,7 +33,7 @@ import 'rxjs/add/operator/delay';
             <i class="ion ion-social-github"></i> <span>Support Us</span>
           </a>-->
           <a href="#" class="btn btn-hero-success main-btn">
-            <i class="ion"></i> <span>JAPO ONLINE</span>
+            <i class="ion"></i> <span>Nama Ananda</span>
           </a>
         </nb-sidebar-header>
         <ng-content select="nb-menu"></ng-content>

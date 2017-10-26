@@ -14,14 +14,27 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NbEmailPassAuthProvider, NbAuthModule } from '@nebular/auth';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpModule,
     AppRoutingModule,
+
+    NbAuthModule.forRoot({
+      providers: {
+        email: {
+          service: NbEmailPassAuthProvider,
+          config: {
+          },
+        },
+      },
+    }),
 
     NgbModule.forRoot(),
     ThemeModule.forRoot(),

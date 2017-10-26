@@ -1,186 +1,120 @@
-Hasil modalitas works!
-
 <div class="row">
-  <div class="col-md-12">
-    <nb-card class="inline-form-card">
-      <nb-card-header>Inline form</nb-card-header>
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>Hasil Modalitas</nb-card-header>
       <nb-card-body>
-        <form class="form-inline">
-          <input type="text" class="form-control full-width" placeholder="Jane Doe">
-          <div class="input-group full-width">
-            <div class="input-group-addon">@</div>
-            <input type="text" class="form-control" placeholder="Email">
-          </div>
-          <nb-checkbox>Remember me</nb-checkbox>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        <ngx-chartjs-pie-modalitas></ngx-chartjs-pie-modalitas>
+        <ngx-chartjs-radar-modalitas></ngx-chartjs-radar-modalitas>
+        <br>
+        <p>
+          Ananda {{ namaKlien }} memproses informasi dengan lebih baik jika dibantu dengan material tertulis atau penjelasan yang detail. Dia lebih optimal dalam membaca sendiri suatu instruksi atau panduan daripada mendengarkan orang lain mengucapkan untuknya. Bisa jadi dia mudah mengingat wajah orang namun lupa akan namanya. Dia sangat butuh mencatat.
+        </p>
       </nb-card-body>
     </nb-card>
+  </div>
+
+
+  <div class="col-lg-6">
+    <nb-card class="inline-form-card" *ngIf="apakahVisual_1">
+        <nb-card-header>Modalitas utama ananda {{ namaKlien }} = <mark>VISUAL</mark></nb-card-header>
+        <nb-card-body>
+          <ul>
+            <li>Saat mengajari ananda {{ namaKlien }} membaca, bantulah dia dengan petunjuk visual (misal dengan membandingkan dengan obyek visual lain atau mencari padanan) - bantulah {{ namaKlien }} &quot;melukis&quot; gambaran di benaknya di saat aktivitas membaca dilakukan;</li>
+            <li>Saat sudah terbiasa membaca, doronglah ananda {{ namaKlien }} untuk membuat gambaran visual dari cerita yang dibaca. Tidak perlu senantiasa melainkan dalam interval</li>
+            <li>Ajaklah ananda {{ namaKlien }} bermain game memori dan permainan yang melibatkan pola visual;</li>
+            <li>Sajikan kepada ananda beragam jenis buku-buku yang bergambar, pun ketika ananda {{ namaKlien }} beranjak besar sekalipun;</li>
+            <li>Ajari ananda menulis dengan menggunakan beragam jenis warna;</li>
+            <li>Ketika ananda sudah di tingkatan SD, mulai perkenalkan dengan teknik mind mapping.</li>
+          </ul>
+          <br>
+        </nb-card-body>
+    </nb-card>
+
+    <nb-card class="inline-form-card" *ngIf="apakahVisual_2">
+      <nb-card-header>Kiat tambahan untuk ananda yang <mark>VISUAL</mark></nb-card-header>
+      <nb-card-body>
+        <ul>
+          <li>Minimalkan gangguan visual di area belajar {{ namaKlien }} (mis: jangan duduk menghadap jendela atau televisi)</li>
+          <li>Buatkan kisi materi dari topik kunci pelajaran ananda {{ namaKlien }} dalam format diagram</li>
+          <li>Ajari ananda {{ namaKlien }} membuat kotak atau lingkaran di sekitar istilah/konsep dan bantulah dengan menggambarkan garis atau panah untuk menanandai hubungan satu sama lain</li>
+          <li>Carikan sketsa, diagram, atau chart untuk membantu ananda {{ namaKlien }} mengartikan informasi</li>
+          <li>Bantulah ananda {{ namaKlien }} mengingat terminologi/istilah penting dengan melihat bagian kata yang sudah dia ketahui</li>
+          <li>Bantulah ananda dalam membuat catatannya menjadi berwarna</li>
+          <li>Bantulah menandai catatan ananda {{ namaKlien }} dengan beberapa warna sehingga informasi yang terkait berada dalam kategori warna yang sama.</li>
+        </ul>
+        <br>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card class="inline-form-card" *ngIf="apakahAuditori_1">
+      <nb-card-header>Modalitas utama ananda {{ namaKlien }} = <mark>AUDITORI</mark></nb-card-header>
+      <nb-card-body>
+        <ul>
+          <li>Mengingat ananda {{ namaKlien }} bertipe auditori, Anda dapat memberi pesan kepada gurunya ananda {{ namaKlien }} untuk membantu ananda dapat duduk di depan atau di manapun yang mana suara guru dapat paling jelas terdengar. Pahamkan juga kepada ananda akan hal ini.</li>
+          <li>Saat belajar, minta ananda {{ namaKlien }} menjauhi sumber &quot;bising&quot; seperti pintu, jendela, dan sumber bising lainnya</li>
+          <li>Perkenankan dan bahkan mintalah ananda {{ namaKlien }} melakukan subvokalisasi, yakni mengulang informasi yang barusan dia dengar di benaknya secara bergumam untuk membantunya mencerna dan mengingat.</li>
+        </ul>
+        <br>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card class="inline-form-card" *ngIf="apakahAuditori_2">
+      <nb-card-header>Kiat tambahan untuk ananda yang <mark>AUDITORI</mark></nb-card-header>
+      <nb-card-body>
+        <ul>
+          <li>Ajari ananda {{ namaKlien }} mengulangi informasi yang ingin dia ingat di benaknya, baik secara lirik maupun keras-keras. Anda dapat melakukannya secara bergantian</li>
+          <li>Sediakan ruang belajar yang tenang di rumah. Bila ananda memiliki saudara, buatlah aturan untuk menjaga kondusivitas ananda {{ namaKlien }} dalam belajar</li>
+          <li>Bila ananda lebih suka belajar sambil mendengar musik, pilihlah yang tidak mengandung lirik agar tidak malah mengalihkan perhatian ananda</li>
+          <li>Bantulah ananda menggunakan rima atau jingle untuk membantu mengingat poin penting</li>
+          <li>Untuk menguji pemahaman ananda {{ namaKlien }} akan suatu topik, mintalah dia membuat pemaparan secara lesan</li>
+          <li>Rekam suara ananda {{ namaKlien }} kala menyimpulkan poin-poin kunci (dengan bantuan Anda), lalu mainkan rekaman itu untuk membantunya dalam mengingat</li>
+          <li>Bantulah ananda {{ namaKlien }} mengingat terminologi/istilah penting dengan memikirkan bagaimana bunyi/suara dari bagian-bagian suku katanya</li>
+          <li>Perkenankan ananda {{ namaKlien }} membaca instruksi dan pertanyaan secara keras-keras (atau secara menggumam)</li>
+        </ul>
+        <br>
+      </nb-card-body>
+    </nb-card>
+
+
+    <nb-card class="inline-form-card" *ngIf="apakahKinestetik_1">
+      <nb-card-header>Modalitas utama ananda {{ namaKlien }} = <mark>KINESTETIK</mark></nb-card-header>
+      <nb-card-body>
+        <ul>
+          <li>Doronglah ananda {{ namaKlien }} berpartisipasi dalam diskusi</li>
+          <li>Doronglah ananda {{ namaKlien }} untuk selalu mencari tahu atau menanyakan aplikasi atau bentuk konkrit dari informasi yang dia dengar</li>
+          <li>Perkenankan ananda {{ namaKlien }} memainkan benda-benda kecil (penghapus, bola kecil, dsb) untuk dia main-mainkan di satu tangan sembari dia mencatat</li>
+          <li>Ajari ananda {{ namaKlien }} mengetik dengan 10 jari melalui permainan mengetik. Aktivitsa menggerakkan jari ini akan bermanfaat bagi ananda {{ namaKlien }}.
+          <li>Ingatkan ananda {{ namaKlien }} untuk mengambil break dalam rentang waktu tertentu daripada mengikuti satu materi secara penuh tanpa jeda</li> ananda {{ namaKlien }} dapat menggunakan waktu itu untuk streching, berjalan-jalan, dan apapun yang intinya beristirahat sejenak.
+        </ul>
+        <br>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card class="inline-form-card" *ngIf="apakahKinestetik_2">
+      <nb-card-header>Kiat tambahan untuk ananda yang <mark>KINESTETIK</mark></nb-card-header>
+      <nb-card-body>
+        <ul>
+          <li>Biarkan ananda {{ namaKlien }} melakukan sesuatu yang mengandung gerak fisk sebelum duduk untuk belajar atau membaca. Sampaikan juga tentang hal ini kepada gurunya di sekolah</li>
+          <li>Mintalah ananda menggunakan highlighter (penanda terang) dan mintalah dia mencatat tanpa perlu mempermasalahkan buruknya tulisan dia (bila memang buruk). Karena intinya adalah pada gerakan tangannya</li>
+          <li>Ajari ananda menggunakan jari, pensil, atau penunjuk apapun untuk membantunya menanandai fokus belajarnya</li>
+          <li>Bantulah ananda {{ namaKlien }} memecah bacaan menjadi bagian-bagian kecil yang ringan</li>
+          <li>Berikan banyak jeda untuknya merefleksikan apa yang barusan dipelajari, dan bantulah ananda membuat kesimpulan versi dia sendiri</li>
+          <li>Lakukan diskusi bersama ananda, jawab pertanyaan yang ada di buku bacaan, buatlah pertanyaan Anda sendiri, dan ajaklah ananda membuat pertanyaan versi dia sendiri (tanpa perlu dipaksa)</li>
+          <li>Perkenankan ananda mengayunkan atau mengetukkan telapak kaki, atau berjalan-jalan bila itu membantu dia berkonsentrasi.</li>
+        </ul>
+        <br>
+      </nb-card-body>
+    </nb-card>
+
+
+
+
+
+
+
+
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-6">
-    <nb-card>
-      <nb-card-header>Using the Grid</nb-card-header>
-      <nb-card-body>
-        <form>
-          <div class="form-group row">
-            <label for="inputEmail1" class="col-sm-3 col-form-label">Email</label>
-            <div class="col-sm-9">
-              <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="inputPassword2" class="col-sm-3 col-form-label">Password</label>
-            <div class="col-sm-9">
-              <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-            </div>
-          </div>
-          <div class="form-group row">
-            <label class="col-sm-3">Radios</label>
-            <div class="col-sm-9">
-              <div class="form-check">
-                <label class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" name="gridRadios" checked>
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Option one is this and that&mdash;be sure to include why it's great</span>
-                </label>
-              </div>
-              <div class="form-check">
-                <label class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" name="gridRadios">
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Option two can be something else and selecting it will deselect option one</span>
-                </label>
-              </div>
-              <div class="form-check disabled">
-                <label class="custom-control custom-radio">
-                  <input type="radio" class="custom-control-input" name="gridRadios" disabled>
-                  <span class="custom-control-indicator"></span>
-                  <span class="custom-control-description">Option three is disabled</span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <div class="offset-sm-3 col-sm-9">
-              <button type="submit" class="btn btn-primary">Sign in</button>
-            </div>
-          </div>
-        </form>
-      </nb-card-body>
-    </nb-card>
 
-    <nb-card>
-      <nb-card-header>Form without labels</nb-card-header>
-      <nb-card-body>
-        <form>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Recipients">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Subject">
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" placeholder="Message"></textarea>
-          </div>
-          <button type="submit" class="btn btn-success">Send</button>
-        </form>
-      </nb-card-body>
-    </nb-card>
-  </div>
 
-  <div class="col-md-6">
-    <nb-card>
-      <nb-card-header>Basic form</nb-card-header>
-      <nb-card-body>
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <nb-checkbox>Check me out</nb-checkbox>
-          </div>
-          <button type="submit" class="btn btn-danger">Submit</button>
-        </form>
-      </nb-card-body>
-    </nb-card>
-
-    <nb-card>
-      <nb-card-header>Block form</nb-card-header>
-      <nb-card-body>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="inputFirstName">First Name</label>
-              <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="inputLastName">Last Name</label>
-              <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="inputEmail">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="form-group">
-              <label for="inputWebsite">Website</label>
-              <input type="text" class="form-control" id="inputWebsite" placeholder="Website">
-            </div>
-          </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </nb-card-body>
-    </nb-card>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-md-6">
-    <nb-card>
-      <nb-card-header>Horizontal form</nb-card-header>
-      <nb-card-body>
-        <form class="form-horizontal">
-          <div class="form-group row">
-            <label for="inputEmail3" class="col-sm-3 form-control-label">Email</label>
-            <div class="col-sm-9">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-            </div>
-          </div>
-          <div class="form-group row">
-            <label for="inputPassword3" class="col-sm-3 form-control-label">Password</label>
-            <div class="col-sm-9">
-              <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-            </div>
-          </div>
-          <div class="form-group row">
-            <div class="offset-sm-3 col-sm-9">
-              <div class="checkbox">
-                <nb-checkbox>Remember me</nb-checkbox>
-              </div>
-            </div>
-          </div>
-          <div class="form-group row">
-            <div class="offset-sm-3 col-sm-9">
-              <button type="submit" class="btn btn-warning">Sign in</button>
-            </div>
-          </div>
-        </form>
-      </nb-card-body>
-    </nb-card>
-  </div>
-</div>

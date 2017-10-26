@@ -3,12 +3,32 @@ Hasil hemisfer works!
 <div class="row">
   <div class="col-md-12">
     <nb-card class="inline-form-card">
-      <nb-card-header>Inline form</nb-card-header>
-      <nb-card-body>
-        {{ kontenHemisfer }}
-      <br>
-      </nb-card-body>
+
+      <ng-template [ngIf]="!apaHemisferKanan">
+        <nb-card-header>Kecondongan ananda {{ namaKlien }} adalah pada <mark>Hemisfer Kiri</mark></nb-card-header>
+        <nb-card-body>
+          <p>Sudah barang tentu ananda {{ namaKlien }} akan masih menggunakan hemisfer kanannya; hanya saja dia memiliki kecenderungan untuk menggunakan hemisfer kiri ananda {{ namaKlien }} lebih sering daripada hemisfer kanan.  ananda {{ namaKlien }} memiliki bakat keterampilan sebagai berikut: menggunakan logika dalam pengambilan keputusan, mendasarkan pada  realita dan fakta, berorientasi pada detail, menguasai kata dan bahasa, peka terhadap aturan. Kata kerja terkait: mengingat nama benda, membaca pola, membangun keteraturan.</p>
+          <p>Sebagai pribadi yang dominan hemisfer kiri, keterampilan yang relatif lebih berkembang di sisi ini adalah menulis, memahami simbol, bahasa dan bunyi kata (phonics), serta membaca. Selain itu, ananda {{ namaKlien }} cenderung berbakat menemukan fakta dan detail, berbicara dan menceritakan ulang, mengikuti arahan, dan menyimak penjelasan lesan.</p>
+          <p>Hemisfer kiri kita adalah bagian otak yang melakukan pendekatan pemecahan masalah secara realistis dan logis berdasarkan pada informasi dan fakta yang tersedia. Maka dengan tendensi hemisfer kiri ananda {{ namaKlien }}, cara dia memproses informasi adalah berbasis pada realita (aspek eksplisit) alih-alih imajinasi atau di balik yang apa yang tampak (aspek implisit). Ananda {{ namaKlien }} mengambil keputusan berdasarkan pengamatan pada kondisi riil di lapangan.</p>
+          <p>Ananda {{ namaKlien }} memiliki bakat dalam mengambil serpihan-serpihan atau beragam potongan informasi lalu memproses semuanya secara linear, sekuensial, dan sistematis dalam rangka memecahkan masalah atau mencapai suatu kesimpulan tertentu. ananda {{ namaKlien }} dapat memproses simbol-simbol seperti huruf, kata, dan notasi matematika dengan lebih baik daripada orang hemisfer kanan.</p>
+          <br>
+        </nb-card-body>
+      </ng-template>
+
+      <ng-template [ngIf]="apaHemisferKanan">
+        <nb-card-header>Kecondongan ananda {{ namaKlien }} adalah pada <mark>Hemisfer Kanan</mark></nb-card-header>
+        <nb-card-body>
+          <p>Sudah barang tentu ananda {{ namaKlien }} akan masih menggunakan hemisfer kirinya; hanya saja dia memiliki kecenderungan untuk menggunakan hemisfer kanan ananda {{ namaKlien }} lebih sering daripada hemisfer kiri.  ananda {{ namaKlien }} memiliki bakat keterampilan sebagai berikut: menggunakan perasaan dalam mengambil keputusan, berorientasi pada &quot;gambaran besar&quot; dan maksud inti (meskipun mungkin lupa akan detail), mengingat fungsi dari sesuatu (meski lupa namanya), pandai berimajinasi dan berfantasi, dan cenderung suka mengambil risiko, lebih menyukai simbol dan gambar.</p>
+          <p>Hemisfer kanan memiliki bakat dalam menangkap dan memahami ekspresi perasaaan orang lain baik yang berwujud kata-kata ataupun ekspresi wajah. Orang hemisfer kanan melihat sesuatu dalam gambaran besarnya alih-alih sisi detailnya. Orang hemisfer kanan memiliki kelebihan dalam mengenali bentuk, menggambar, dan apapun kerja yang melibatkan bentuk dan pola termasuk gambar geometris. Ini termasuk kepekaan terhadap spektrum warna dan tingkat kecerahan benda serta kemampuan untuk memvisualisasi sesuatu yang kaya warna.</p>
+          <p>Orang hemisfer kanan memiliki kemampuan dalam mengenali dan memproses isyarat non verbal, mengingat hemisfer kanan kita mengatur kemampuan berkomunikasi dengan bahasa tubuh. Meskipun motor cortex kita terletak di kedua hemisfer, kemampuan untuk membuat penilaian berdasarkan hubungan antara tubuh dan ruang (biasa dibutuhkan dalam olahraga, gerakan kreatif, dance, misal) pada dasarnya berpusat di hemisfer kanan. Ananda {{ namaKlien }} juga dapat menyampaikan ulang cerita tanpa masalah bahkan dengan tambahan bumbu darinya sendiri.</p>
+          <p>Seni kreatif adalah wilayahnya orang hemisfer kanan. Meskipun orang hemisfer kiri juga bisa mahir di seni, namun &quot;seni&quot; mereka bersifat terstruktur dan harus mengikuti &quot;aturan&quot; tertentu. Sementara ananda {{ namaKlien }} dapat membuat karya seni yang bersifat &quot;misteri&quot;, yang penuh makna tersirat hingga membuat orang lain bertanya-tanya.</p>
+          <br>
+        </nb-card-body>
+      </ng-template>
+
     </nb-card>
+
+
   </div>
 </div>
 
@@ -17,25 +37,43 @@ Hasil hemisfer works!
     <nb-card>
       <nb-card-header>Komposisi</nb-card-header>
       <nb-card-body>
-        <ngx-chartjs-hemisfer-pie></ngx-chartjs-hemisfer-pie>
+          <ngx-chartjs-pie-hemisfer></ngx-chartjs-pie-hemisfer>
       </nb-card-body>
     </nb-card>
   </div>
 
   <div class="col-lg-6">
+
     <nb-card>
-      <nb-card-header>Catatan dan ToDo List</nb-card-header>
-      <nb-card-body>
-        Namun jangan kemudian menjadi orang otak-kiri secara ekstrim, karena itu akan buruk bagi Anda. Anda juga perlu mengembangkan sisi hemisfer kanan Anda dengan melakukan semisal:
-        <ul class="mb-5">
-          <li>Beri perhatian lebih pada BAGAIMANA Anda mengatakan (nada, pitch, dan ritme suara bicara);</li>
-          <li>Coba lebih rasakan bagaimana respon orang lain terhadap Anda. Orang hemisfer kanan biasanya lebih ekspresif secara emosional dan secara intuitif mengatakan mana yang &quot;terasa&quot; benar;</li>
-          <li>Lihatlah gambaran besar dari sesuatu, kemungkinan-kemungkinan darinya dengan sebanyak mungkin informasi dari indera.</li>
-          <li>Ajukan lebih banyak pertanyaan terbuka &quot;mengapa?&quot; dan &quot;bagaimana?&quot;</li>
-          <li>Cobalah lebih bersikap spontan. Anda tidak perlu membuat rencana untuk segala hal.</li>
-        </ul>
-      </nb-card-body>
+      <ng-template [ngIf]="!apaHemisferKanan">
+        <nb-card-header>Catatan Improvement bagi ananda {{ namaKlien }}</nb-card-header>
+        <nb-card-body>
+          Namun jangan kemudian menjadi orang otak-kiri secara ekstrim, karena itu akan buruk bagi ananda {{ namaKlien }}. Dia juga perlu mengembangkan sisi hemisfer kanannya dengan melakukan semisal:
+          <ul class="mb-5">
+            <li>Beri perhatian lebih pada BAGAIMANA ananda {{ namaKlien }} mengatakan (nada, pitch, dan ritme suara bicara);</li>
+            <li>Coba lebih rasakan bagaimana respon orang lain terhadap ananda {{ namaKlien }}. Orang hemisfer kanan biasanya lebih ekspresif secara emosional dan secara intuitif mengatakan mana yang &quot;terasa&quot; benar;</li>
+            <li>Lihatlah gambaran besar dari sesuatu, kemungkinan-kemungkinan darinya dengan sebanyak mungkin informasi dari indera.</li>
+            <li>Ajukan lebih banyak pertanyaan terbuka &quot;mengapa?&quot; dan &quot;bagaimana?&quot;</li>
+            <li>Cobalah lebih bersikap spontan. Ananda {{ namaKlien }} tidak perlu membuat rencana untuk segala hal.</li>
+          </ul>
+        </nb-card-body>
+      </ng-template>
+
+      <ng-template [ngIf]="apaHemisferKanan">
+        <nb-card-header>Catatan Improvement bagi ananda {{ namaKlien }}</nb-card-header>
+        <nb-card-body>
+          Namun jangan kemudian menjadi orang otak-kanan secara ekstrim, karena itu akan buruk bagi ananda {{ namaKlien }}. Dia juga perlu mengembangkan sisi hemisfer kirinya dengan melakukan semisal:
+          <ul class="mb-5">
+            <li>Belajar lebih detail, dan menyampaikan ide dia secara jelas, ringkas, dan terurut sistematis;</li>
+            <li>Tantanglah pikiran ananda {{ namaKlien }} dengan ide-ide baru, termasuk mempelajari bahasa baru;</li>
+            <li>Coba lebih perhatikan apa-apa yang ananda {{ namaKlien }} katakan (isi pembicaraan) alih-alih sekedar memperhatikan BAGAIMANA dia mengatakannya;</li>
+            <li>Cobalah melihat urutan linear dari peristiwa alih-alih sekedar melihat gambaran besarnya.</li>
+          </ul>
+        </nb-card-body>
+      </ng-template>
+
     </nb-card>
+
   </div>
 
 </div>

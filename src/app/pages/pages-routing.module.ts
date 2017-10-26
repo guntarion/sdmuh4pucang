@@ -7,12 +7,17 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
-  children: [{
+  children: [
+
+  {
     path: 'dashboard',
     component: DashboardComponent,
   }, {
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
+  }, {
+    path: 'sambutan',
+    loadChildren: './a-sambutan/sambutan.module#SambutanModule',
   }, {
     path: 'analisishasil',
     loadChildren: './analisishasil/hasilanalisis.module#HasilAnalisisModule',
@@ -31,7 +36,8 @@ const routes: Routes = [{
   }, {
     path: 'bantuan',
     loadChildren: './a-bantuan/bantuan.module#BantuanModule',
-  }, {
+  },
+  /*{
     path: 'components',
     loadChildren: './components/components.module#ComponentsModule',
   }, {
@@ -49,7 +55,8 @@ const routes: Routes = [{
   }, {
     path: 'tables',
     loadChildren: './tables/tables.module#TablesModule',
-  }, {
+  }, */
+    {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',

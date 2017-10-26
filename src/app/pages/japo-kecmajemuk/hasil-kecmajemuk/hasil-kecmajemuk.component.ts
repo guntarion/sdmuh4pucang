@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   templateUrl: './hasil-kecmajemuk.component.html',
 })
 export class HasilKecmajemukComponent {
+  namaKlien: string;
+  apaBerbakatVisual_1: boolean;
+  apaBerbakatVisual_2: boolean;
 
+  constructor() {
+    this.namaKlien = 'Ariani';
+    this.apaBerbakatVisual_1 = true;
+    this.apaBerbakatVisual_2 = true;
+  }
 }

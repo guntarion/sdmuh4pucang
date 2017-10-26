@@ -2,12 +2,12 @@ import { Component, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
 
 @Component({
-  selector: 'ngx-chartjs-hemisfer-pie',
+  selector: 'ngx-chartjs-pie-modalitas',
   template: `
     <chart type="pie" [data]="data" [options]="options"></chart>
   `,
 })
-export class ChartjsPieComponent implements OnDestroy {
+export class ChartjsPieModalitasComponent implements OnDestroy {
   data: any;
   options: any;
   themeSubscription: any;
@@ -19,9 +19,9 @@ export class ChartjsPieComponent implements OnDestroy {
       const chartjs: any = config.variables.chartjs;
 
       this.data = {
-        labels: ['Hemisfer Kanan', 'Hemisfer Kiri'],
+        labels: ['Visual', 'Auditory', 'Kinestetik'],
         datasets: [{
-          data: [54, 46],
+          data: [20, 50, 30],
           backgroundColor: [colors.primaryLight, colors.infoLight, colors.successLight],
         }],
       };
@@ -31,7 +31,7 @@ export class ChartjsPieComponent implements OnDestroy {
         responsive: true,
         scale: {
           pointLabels: {
-            fontSize: 15,
+            fontSize: 14,
             fontColor: chartjs.textColor,
           },
         },
