@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node Server.js",
     "start:hmr": "ng serve --hmr",
     "start:aot": "ng serve --aot",
     "build": "rimraf dist && ng build",
@@ -19,9 +19,11 @@
     "lint:ci": "npm run lint && npm run lint:styles",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "ng e2e",
-    "prepush": "npm run lint:ci"
+    "prepush": "npm run lint:ci",
+    "postinstall": "ng build --aot -prod"
   },
   "dependencies": {
+    "@angular/cli": "1.2.6",
     "@agm/core": "1.0.0-beta.0",
     "@angular/animations": "4.3.2",
     "@angular/common": "4.3.2",
@@ -45,6 +47,7 @@
     "classlist.js": "1.1.20150312",
     "core-js": "2.4.1",
     "d3": "4.8.0",
+    "express": "^4.16.2",
     "font-awesome": "4.7.0",
     "intl": "1.2.5",
     "ionicons": "2.0.1",
@@ -56,6 +59,7 @@
     "ngx-echarts": "1.2.2",
     "normalize.css": "6.0.0",
     "pace-js": "^1.0.2",
+    "primeng": "^4.2.2",
     "roboto-fontface": "0.8.0",
     "rxjs": "5.4.2",
     "socicon": "^3.0.5",
@@ -66,7 +70,6 @@
     "zone.js": "0.8.16"
   },
   "devDependencies": {
-    "@angular/cli": "1.2.6",
     "@angular/compiler-cli": "4.3.2",
     "@angular/language-service": "4.3.2",
     "@types/d3-color": "1.0.4",
